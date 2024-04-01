@@ -157,7 +157,7 @@ html {
   margin: 100px auto 0;
   width: 70%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
