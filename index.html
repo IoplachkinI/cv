@@ -31,22 +31,82 @@
 </head>
 <body>
 <div class="page">
+  <svg class = "svg-container" xmlns="http://www.w3.org/2000/svg">
+  </svg>
+  <div class="popup__background inactive"></div>
+  <div class="popup-container gallery-popup-container inactive">
+    <a class="gallery-popup__button button_prev inactive"><img  class="button__img" src="images/arrow.png" alt="Стрелочка"></a>
+    <img class="gallery-popup__picture" src="./images/gallery_pic1.jpg" data-ind=-1 alt="Увеличенная картинка">
+    <a class="gallery-popup__button button_next inactive"><img class="button__img" src="images/arrow.png" alt="Стрелочка"></a>
+  </div>
+  <div class="popup-container form-popup-container inactive">
+    <div class="form-body popup-body_with-text">
+      <label class="form-body__label" for="tel">Телефон *</label>
+      <input class="form-body__input-field" type="tel" id="tel" placeholder="+7(***)*******">
+      <label class="form-body__label" for="email">Адрес e-mail *</label>
+      <input class="form-body__input-field" type="email" id="email" placeholder="amogus@example.com">
+      <label class="form-body__label" for="feedback">Фидбек:</label>
+      <textarea class="form-body__input-field" id="feedback"
+                placeholder="Мне очень понавился твой сайт! Автор, ты супер!!! <3"></textarea>
+      <input class="form-body__button submit_button" type="submit" id="submit" value="Отправить">
+    </div>
+  </div>
+  <div class="popup-container info-popup-container inactive">
+    <div class="popup-body_with-text">
+      <div class="popup-text-container">
+        <p class="popup-text info-popup__text">Err. No</p>
+      </div>
+    </div>
+  </div>
+  <div class="popup-container timed-popup-container inactive">
+    <div class="popup-body_with-text">
+      <h3 class="popup-title">Божественная интеграция</h3>
+      <div class="popup-text-container popup-text-container_with-header">
+        <p class="popup-text">Подпишись на лекторий ВШПИ, пожалуйста! <3</p>
+        <a class="link timed-popup__link" href="https://www.youtube.com/@hsse_lectures" target="_blank"><img
+            class="social-icon" src="./images/youtube.png" alt="Youtube icon"></a>
+      </div>
+    </div>
+  </div>
   <header class="header centered">
     <h1 class="header__title">Резюме</h1>
     <nav class="header__menu">
     </nav>
   </header>
   <hr class="divider divider_thick">
+  <div class="menu__container">
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#intro"><p class="menu__item-text">Введение</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#about"><p class="menu__item-text">Обо мне</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#skills"><p class="menu__item-text">Навыки</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#portfolio"><p class="menu__item-text">Портфолио</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#education"><p class="menu__item-text">Образование</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#gallery"><p class="menu__item-text">Галерея</p></a>
+    </div>
+    <div class="menu__item-container">
+      <a class="menu__item-text-wrapper" href="#countdown"><p class="menu__item-text">ДР</p></a>
+    </div>
+  </div>
   <main class="content centered">
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="intro__container">
         <img class="intro__image" src="./images/intro_pic.png" alt="Фотография Ильи Александровича О.">
         <p class="intro__text">Привет!</p>
         <p class="intro__text">Меня зовут Илья</p>
-        <p class="intro__text">А это — <i>мое резюме</i></>
+        <p class="intro__text">А это — <i>мое резюме</i></p>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__container paragraph-container">
         <p class="paragraph-text">
           На данный момент я учусь на 1-м курсе
@@ -57,7 +117,7 @@
         </p>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2 class="content__title">Навыки</h2>
       <hr class="divider">
       <div class="skills__container">
@@ -68,7 +128,7 @@
         <div class="skills__card card">
           <img class="skills__image" src="./images/cpp.png" alt="C++ logo">
           <p class="skills__caption caption">Многолетний опыт программирования на C++: от консольных игр
-          до фреймворков для микросервисной разработки</p>
+            до фреймворков для микросервисной разработки</p>
         </div>
         <div class="skills__card card">
           <img class="skills__image" src="./images/unity.png" alt="Unity logo">
@@ -80,7 +140,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="content__title">Портфолио</h2>
       <hr class="divider">
       <div class="portfolio__container">
@@ -106,34 +166,58 @@
         </div>
       </div>
     </section>
-    <section class="education">
-      <h2 class="content__title">Обучение</h2>
+    <section class="education" id="education">
+      <h2 class="content__title">Образование</h2>
       <hr class="divider">
       <div class="education__container paragraph-container">
         <p class="paragraph-text"><b>2012-2023</b> — Учился в простой школе №853 города Зеленограда,
-        в физико-математическом классе. В старших классах занимался с репетитором и готовился
-        к олимпиадам. Результатом этих трудов стали дипломы таких олимпиад, как Физтех,
-        Ломоносов, Росатом и другие</p>
+          в физико-математическом классе. В старших классах занимался с репетитором и готовился
+          к олимпиадам. Результатом этих трудов стали дипломы таких олимпиад, как Физтех,
+          Ломоносов, Росатом и другие</p>
       </div>
       <div class="education__container paragraph-container">
         <p class="paragraph-text"><b>2023-Настоящее время</b> — Прохожу обучение в ВШПИ МФТИ. Многое
-        еще впереди, так что эта глава моей жизни только начинается =)</p>
+          еще впереди, так что эта глава моей жизни только начинается =)</p>
       </div>
     </section>
-    <section class="hobbies">
-
+    <section class="gallery" id="gallery">
+      <h2 class="content__title">Галерея</h2>
+      <hr class="divider">
+      <div class="gallery__container">
+        <a class="picture_wrapper"><img class="gallery__picture" src="./images/gallery_pic1.jpg" data-ind=0
+                                        alt="Фото из Казани 2024"></a>
+        <a class="picture_wrapper"><img class="gallery__picture" src="./images/gallery_pic2.jpg" data-ind=1
+                                        alt="Фото с Пушным 2024"></a>
+        <a class="picture_wrapper"><img class="gallery__picture" src="./images/gallery_pic3.jpg" data-ind=2
+                                        alt="Фото с 1-го тура Ночной Лиги"></a>
+        <a class="picture_wrapper"><img class="gallery__picture" src="./images/gallery_pic4.jpg" data-ind=3
+                                        alt="Фото с благодарностью ВШПИ на НК"></a>
+      </div>
+    </section>
+    <section class="countdown" id="countdown">
+      <h2 class="content__title">Время до моего Дня Рождения</h2>
+      <h2 class="content__title countdown-text">00:00:00:00</h2>
     </section>
   </main>
+  <hr class="divider divider_thick">
   <footer class="footer">
-    <hr class="divider divider_thick">
     <div class="footer__container">
-        <a class="link" href="https://t.me/IoplachkinI"><img class="footer__image" src="./images/tg.png" alt="Telegram icon"></a>
-        <a class="link" href="https://vk.com/loplachkinl"><img class="footer__image" src="./images/vk.png" alt="VK icon"></a>
-        <a class="link" href="https://github.com/IoplachkinI"><img class="footer__image" src="./images/white-github.png" alt="GitHub icon"></a>
-        <a class="link" href="https://gitlab.com/IoplachkinI"><img class="footer__image" src="./images/gitlab.png" alt="GitLab icon"></a>
+      <a class="link" href="https://t.me/IoplachkinI" target="_blank"><img class="social-icon" src="./images/tg.png"
+                                                                           alt="Telegram icon"></a>
+      <a class="link" href="https://vk.com/loplachkinl" target="_blank"><img class="social-icon" src="./images/vk.png"
+                                                                             alt="VK icon"></a>
+      <a class="link" href="https://github.com/IoplachkinI" target="_blank"><img class="social-icon"
+                                                                                 src="./images/white-github.png"
+                                                                                 alt="GitHub icon"></a>
+      <a class="link" href="https://gitlab.com/IoplachkinI" target="_blank"><img class="social-icon"
+                                                                                 src="./images/gitlab.png"
+                                                                                 alt="GitLab icon"></a>
     </div>
+    <p class="footer__caption form-link">Форма обратной связи</p>
+    <br>
     <p class="footer__caption">© Оплачкин Илья, 2024</p>
   </footer>
 </div>
+<script src="./scripts/script.js"></script>
 </body>
 </html>
