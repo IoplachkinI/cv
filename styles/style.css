@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /*border: 1px solid red;*/
 }
 
 :root {
@@ -195,12 +194,10 @@ html {
 
 .active {
   visibility: visible;
-  /*display: flex;*/
   z-index: 5;
 }
 
 .inactive {
-  /*display: none;*/
   visibility: hidden;
   z-index: -1;
 }
@@ -224,7 +221,6 @@ html {
 }
 
 .gallery-popup__button {
-  /*background-color: white;*/
   width: 100px;
   height: 100px;
 }
